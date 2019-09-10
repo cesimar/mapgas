@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/style-analiseDaGasolina.css">
+    <title>Análises da Gasolina - Últimas Análises</title>
+</head>
+
+<body>
+    <header>
+        <img src="img/LogoMapGas.png" alt="">
+        <h3>Análises da Gasolina</h3>
+        <a href="#"></a>
+    </header>
+    <main>
+        <div id="graf">
+            <canvas class="line-chart"></canvas>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+        <script src="js/script-grafico.js"></script>
+
+        <div id="dados">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="area">Zona Norte de Natal</td>
+                        <td class="analises">51 análises</td>
+                    </tr>
+                    <tr>
+                        <td class="area">Emaús - Parnamirim</td>
+                        <td class="analises">10 análises</td>
+                    </tr>
+                    <tr>
+                        <td class="area">Zona Sul de Natal</td>
+                        <td class="analises">43 análises</td>
+                    </tr>
+                    <tr>
+                        <td class="area">Bairro Potengi / Natal</td>
+                        <td class="analises">13 análises</td>
+                    </tr>
+                    <tr>
+                        <td class="area">Ceará-Mirim</td>
+                        <td class="analises">3 análises</td>
+                    </tr>
+                    <tr id="ultimo">
+                        <td class="area">Golandim - São Gonçalo do A</td>
+                        <td class="analises">7 análises</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <a href=""><img src="img/Icon-Home.png" alt=""></a>
+        </div>
+        <div>
+            <a href=""><img src="img/analise/column-desactive.png" alt=""></a>
+        </div>
+        <div>
+            <a href=""><img src="img/analise/pie-active.png" alt=""></a>
+        </div>
+        <div>
+            <a href=""><img src="img/analise/line-desactive.png" alt=""></a>
+        </div>
+    </footer>
+</body>
+
+</html>

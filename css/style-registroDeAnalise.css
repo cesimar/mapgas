@@ -1,0 +1,65 @@
+#inserirDados {
+    margin-top: 1em;
+    width: 90%;
+    max-width: 380px;
+    text-align: left;
+}
+
+#inserirDados div {
+    margin: 10px auto;
+}
+
+.dados input {
+    width: 100%;
+    height: 4em;
+    background: #FCFCFC;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+.dados h3 {
+    font-size: .95em;
+    color: #675F58;
+}
+
+.dados h5 {
+    font-size: 0.65em;
+    color: #BDBDBD;
+    font-weight: 300;
+}
+
+#localizacao {
+    background-image: url("../img/pin.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+#ml {
+    width: 40%;
+    background-image: url("../img/ml.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+button {
+    margin: 3em auto;
+    padding: 16px 18px;
+    border-radius: 4px;
+    color: #fff;
+    background: #2D9CDB;
+    text-align: center;
+    display: block;
+}
+
+div#insert {
+    margin: auto 62px;
+}
+
+#insert img {
+    width: 30px;
+}
+
+#insert h6 {
+    position: relative;
+    top: -17px;
+}
