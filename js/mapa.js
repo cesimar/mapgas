@@ -91,15 +91,15 @@ function marcadores() {
 
     for (i = 0; i < locations.length; i++) {
         if (locations[i][3] === true) {
-            a = 'img/mapa/valid.png';
+            icon = 'img/mapa/valid.png';
         } else{
-            a = 'img/mapa/not-valid.png';
+            icon = 'img/mapa/not-valid.png';
         }
         marker = new google.maps.Marker({
             position: new google.maps.LatLng(locations[i][1], locations[i][2]),
             map: map,
             animation: google.maps.Animation.DROP,
-            icon: a
+            icon: icon
         });
 
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
