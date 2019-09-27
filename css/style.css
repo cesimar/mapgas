@@ -1,0 +1,23 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#body-map {
+    margin-bottom: 0
+}
+
+.botao {
+    background-image: url('../img/mapa/local.png');
+    background-repeat: no-repeat;
+}
+
+#map {
+    height: 100%;
+}
+
+main {
+    height: 85.5%;
+}
