@@ -42,7 +42,7 @@ class LocalControl {
                             icon: 'img/mapa/user.png'
                         });
                         infowindow = new google.maps.InfoWindow({
-                            content: '<h3>LocalizaÃ§Ã£o</h3>'
+                            content: 'Localiza��o'
                         });
 
                         marker.addListener('click', function() {
@@ -65,24 +65,24 @@ class LocalControl {
 
 function marcadores() {
     var locations = [
-        ['Posto Ipiranga', -5.7413882, -35.2669367, 'img/mapa/valid.png'],
-        ['Posto Interlagos', -5.7579979, -35.2638898, 'img/mapa/not-valid.png'],
-        ['Posto Carrefour', -5.7592728, -35.2475323, 'img/mapa/valid.png'],
-        ['Posto Vale Dourado', -5.7594884, -35.2647112, 'img/mapa/not-valid.png'],
-        ['Posto Ale', -5.768729, -35.2672614, 'img/mapa/valid.png'],
-        ['Posto Leganes', -5.7447409, -35.26769, 'img/mapa/not-valid.png'],
-        ['Posto Petrobras', -5.7658638, -35.2788638, 'img/mapa/valid.png'],
-        ['Posto Petrobras', -5.7622468, -35.2877292, 'img/mapa/not-valid.png'],
-        ['Posto Petrobras', -5.7716351, -35.2690476, 'img/mapa/valid.png'],
-        ['Posto Petrobras', 5.7678136, 35.254553, 'img/mapa/not-valid.png'],
-        ['Posto Petrobras', -5.7627432, -35.2518332, 'img/mapa/valid.png'],
-        ['Posto Petrobras', -5.760228, -35.2481881, 'img/mapa/not-valid.png'],
-        ['Posto Ale', -5.6612735, -35.2549529, 'img/mapa/valid.png'],
-        ['Posto Ale', -5.768729, -35.2672613, 'img/mapa/not-valid.png'],
-        ['Posto Macaco', -5.7740969, -35.2591476, 'img/mapa/valid.png'],
-        ['Posto Ale', -5.7712735, -35.2549526, 'img/mapa/not-valid.png'],
-        ['Posto Cirne', -5.7669697, -35.2780742, 'img/mapa/valid.png'],
-        ['Posto Canaã', -5.767795, -35.2545825, 'img/mapa/not-valid.png']
+        ['Posto Ipiranga', -5.7413882, -35.2669367, true],
+        ['Posto Interlagos', -5.7579979, -35.2638898, false],
+        ['Posto Carrefour', -5.7592728, -35.2475323, true],
+        ['Posto Vale Dourado', -5.7594884, -35.2647112, false],
+        ['Posto Ale', -5.768729, -35.2672614, true],
+        ['Posto Leganes', -5.7447409, -35.26769, false],
+        ['Posto Petrobras', -5.7658638, -35.2788638, true],
+        ['Posto Petrobras', -5.7622468, -35.2877292, false],
+        ['Posto Petrobras', -5.7716351, -35.2690476, true],
+        ['Posto Petrobras', 5.7678136, 35.254553, false],
+        ['Posto Petrobras', -5.7627432, -35.2518332, true],
+        ['Posto Petrobras', -5.760228, -35.2481881, false],
+        ['Posto Ale', -5.6612735, -35.2549529, true],
+        ['Posto Ale', -5.768729, -35.2672613, false],
+        ['Posto Macaco', -5.7740969, -35.2591476, true],
+        ['Posto Ale', -5.7712735, -35.2549526, false],
+        ['Posto Cirne', -5.7669697, -35.2780742, true],
+        ['Posto Canaã', -5.767795, -35.2545825, false]
     ];
 
     var infowindow = new google.maps.InfoWindow();
@@ -90,11 +90,16 @@ function marcadores() {
     var marker, i;
 
     for (i = 0; i < locations.length; i++) {
+        if (locations[i][3] === true) {
+            a = 'img/mapa/valid.png';
+        } else{
+            a = 'img/mapa/not-valid.png';
+        }
         marker = new google.maps.Marker({
             position: new google.maps.LatLng(locations[i][1], locations[i][2]),
             map: map,
             animation: google.maps.Animation.DROP,
-            icon: locations[i][3]
+            icon: a
         });
 
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
@@ -109,7 +114,7 @@ function marcadores() {
 function initMap() {
     const mapOptions = {
         center: centerMap,
-        zoom: 14,
+        zoom: 13.5,
         disableDefaultUI: true
     };
 
