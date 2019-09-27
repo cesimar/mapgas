@@ -1,0 +1,61 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    width: 90%;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    margin: 35px auto;
+}
+
+form div label {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+form div input {
+    height: 53px;
+    background: #FCFCFC;
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    border: none;
+}
+
+form div input#local {
+    background-image: url('../img/pin.png');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+}
+
+form div input#teste {
+    width: 33%;
+    background-image: url('../img/ml.png');
+    background-repeat: no-repeat;
+    background-position-x: 92%;
+    background-position-y: center;
+}
+
+form div:last-child {
+    align-items: center;
+}
+
+form button {
+    height: 42px;
+    width: 72%;
+    background: #2D9CDB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: none;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+}
