@@ -1,0 +1,110 @@
+[
+    {
+        "nome": "Posto Ipiranga",
+        "Latitude": -5.7413882,
+        "Longitude": -35.2669367,
+        "status": true
+    },
+    {
+        "nome": "Posto Interlagos",
+        "Latitude": -5.7579979,
+        "Longitude": -35.2638898,
+        "status": false
+    },
+    {
+        "nome": "Posto Carrefour",
+        "Latitude": -5.7592728,
+        "Longitude": -35.2475323,
+        "status": true
+    },
+    {
+        "nome": "Posto Vale Dourado",
+        "Latitude": -5.7594884,
+        "Longitude": -35.2647112,
+        "status": false
+    },
+    {
+        "nome": "Posto Ale",
+        "Latitude": -5.768729,
+        "Longitude": -35.2672614,
+        "status": true
+    },
+    {
+        "nome": "Posto Leganes",
+        "Latitude": -5.7447409,
+        "Longitude": -35.26769,
+        "status": false
+    },
+    {
+        "nome": "Posto Petrobras",
+        "Latitude": -5.7658638,
+        "Longitude": -35.2788638,
+        "status": true
+    },
+    {
+        "nome": "Posto Petrobras",
+        "Latitude": -5.7622468,
+        "Longitude": -35.2877292,
+        "status": false
+    },
+    {
+        "nome": "Posto Petrobras",
+        "Latitude": -5.7716351,
+        "Longitude": -35.2690476,
+        "status": true
+    },
+    {
+        "nome": "Posto Petrobras",
+        "Latitude": -5.7678136,
+        "Longitude": -35.254553,
+        "status": false
+    },
+    {
+        "nome": "Posto Petrobras",
+        "Latitude": -5.7627432,
+        "Longitude": -35.2518332,
+        "status": true
+    },
+    {
+        "nome": "Posto Petrobras",
+        "Latitude": -5.760228,
+        "Longitude": -35.2481881,
+        "status": false
+    },
+    {
+        "nome": "Posto Ale",
+        "Latitude": -5.7612735,
+        "Longitude": -35.2549529,
+        "status": true
+    },
+    {
+        "nome": "Posto Ale",
+        "Latitude": -5.768729,
+        "Longitude": -35.2672613,
+        "status": false
+    },
+    {
+        "nome": "Posto Macaco",
+        "Latitude": -5.7740969,
+        "Longitude": -35.2591476,
+        "status": true
+    },
+    {
+        "nome": "Posto Ale",
+        "Latitude": -5.7712735,
+        "Longitude": -35.2549526,
+        "status": false
+    },
+    {
+        "nome": "Posto Cirne",
+        "Latitude": -5.7669697,
+        "Longitude": -35.2780742,
+        "status": true
+    },
+    {
+        "nome": "Posto Canaã",
+        "Latitude": -5.767795,
+        "Longitude": -35.2545825,
+        "status": false
+    }
+]

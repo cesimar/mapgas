@@ -32,26 +32,26 @@ class LocalControl {
 
         this.controlUI.addEventListener('click', () => {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) { // callback de sucesso
-                        // ajusta a posiÃ§Ã£o do marker para a localizaÃ§Ã£o do usuÃ¡rio
-                        marker = new google.maps.Marker({
-                            map: map,
-                            draggable: false,
-                            animation: google.maps.Animation.DROP,
-                            position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
-                            icon: 'img/mapa/user.png'
-                        });
-                        infowindow = new google.maps.InfoWindow({
-                            content: 'Localiza��o'
-                        });
+                navigator.geolocation.getCurrentPosition(function (position) { // callback de sucesso
+                    // ajusta a posiÃ§Ã£o do marker para a localizaÃ§Ã£o do usuÃ¡rio
+                    marker = new google.maps.Marker({
+                        map: map,
+                        draggable: false,
+                        animation: google.maps.Animation.DROP,
+                        position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+                        icon: 'img/mapa/user.png'
+                    });
+                    infowindow = new google.maps.InfoWindow({
+                        content: 'Localiza��o'
+                    });
 
-                        marker.addListener('click', function() {
-                            infowindow.open(map, marker);
-                        });
-                        map.panTo(marker.position);
-                        map.setZoom(16);
-                    },
-                    function(error) { // callback de erro
+                    marker.addListener('click', function () {
+                        infowindow.open(map, marker);
+                    });
+                    map.panTo(marker.position);
+                    map.setZoom(16);
+                },
+                    function (error) { // callback de erro
                         alert('Erro ao obter localização!');
                         console.log('Erro ao obter localização.', error);
                     });
@@ -64,51 +64,36 @@ class LocalControl {
 }
 
 function marcadores() {
-    var locations = [
-        ['Posto Ipiranga', -5.7413882, -35.2669367, true],
-        ['Posto Interlagos', -5.7579979, -35.2638898, false],
-        ['Posto Carrefour', -5.7592728, -35.2475323, true],
-        ['Posto Vale Dourado', -5.7594884, -35.2647112, false],
-        ['Posto Ale', -5.768729, -35.2672614, true],
-        ['Posto Leganes', -5.7447409, -35.26769, false],
-        ['Posto Petrobras', -5.7658638, -35.2788638, true],
-        ['Posto Petrobras', -5.7622468, -35.2877292, false],
-        ['Posto Petrobras', -5.7716351, -35.2690476, true],
-        ['Posto Petrobras', 5.7678136, 35.254553, false],
-        ['Posto Petrobras', -5.7627432, -35.2518332, true],
-        ['Posto Petrobras', -5.760228, -35.2481881, false],
-        ['Posto Ale', -5.6612735, -35.2549529, true],
-        ['Posto Ale', -5.768729, -35.2672613, false],
-        ['Posto Macaco', -5.7740969, -35.2591476, true],
-        ['Posto Ale', -5.7712735, -35.2549526, false],
-        ['Posto Cirne', -5.7669697, -35.2780742, true],
-        ['Posto Canaã', -5.767795, -35.2545825, false]
-    ];
 
     var infowindow = new google.maps.InfoWindow();
 
     var marker, i;
 
-    for (i = 0; i < locations.length; i++) {
-        if (locations[i][3] === true) {
-            icon = 'img/mapa/valid.png';
-        } else{
-            icon = 'img/mapa/not-valid.png';
-        }
-        marker = new google.maps.Marker({
-            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-            map: map,
-            animation: google.maps.Animation.DROP,
-            icon: icon
-        });
+    $.getJSON('js/pontos.json', function (pontos) {
 
-        google.maps.event.addListener(marker, 'click', (function(marker, i) {
-            return function() {
-                infowindow.setContent(locations[i][0]);
-                infowindow.open(map, marker);
-            };
-        })(marker, i));
-    }
+        $.each(pontos, function (index, pontos) {
+
+            if (pontos.status == true) {
+                icon = 'img/mapa/valid.png';
+            } else {
+                icon = 'img/mapa/not-valid.png';
+            }
+
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(pontos.Latitude, pontos.Longitude),
+                map: map,
+                icon: icon
+            });
+
+            google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    infowindow.setContent(pontos.nome);
+                    infowindow.open(map, marker);
+                };
+            })(marker, i))
+        });
+    });
+    
 }
 
 function initMap() {
