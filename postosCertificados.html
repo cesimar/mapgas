@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-headerMenuFooter.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="js/jquery.min.js"></script>
+    <title>MapGas - Postos Certificados</title>
+    
+</head>
+
+<body id="body-map">
+
+    <header>
+
+        <a href="index.html" id="logo"><img src="img/mapgas.png" alt=""></a>
+
+        <h1>Postos Certificados</h1>
+
+        <div>
+            <input type="checkbox" id="check">
+            <label for="check" id="icone">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <div id="barra">
+                <nav>
+                    <div class="link">
+                        <label for="pesquisa">
+                            <i class="fas fa-search"></i>
+                        </label>
+                        <input type="text" placeholder="Pesquise aqui" id="pesquisa">
+                    </div>
+                    <a href="postosCertificados.html">
+                        <div class="link">
+                            <div><img src="img/menu/postos.png" alt="">Postos Certificados</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="link">
+                            <div><img src="img/menu/map-area.png" alt="">Regiões Verdes</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="link">
+                            <div><img src="img/menu/analises.png" alt="">Análises da Gasolina</div>
+                        </div>
+                    </a>
+                    <a href="registroDeAnalise.html">
+                        <div class="link">
+                            <div><img src="img/menu/registrar.png" alt="">Registrar Posto</div>
+                        </div>
+                    </a>
+                    <a href="processoDeAnalise.html">
+                        <div class="link">
+                            <div><img src="img/menu/processo.png" alt="">Processo de Análise</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="link">
+                            <div><img src="img/menu/informacao.png" alt="">Sobre</div>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div id="map"></div>
+        <script src="js/mapa-postosCertificados.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiB1ufV5afqKohev2qUcE3n38MtDJGelE&callback=initMap"></script>
+    </main>
+
+    <footer>
+        <div>
+            <a href="index.html"><img src="img/nav-footer/home-inativo.png" alt=""></a>
+        </div>
+        <div>
+            <a href="#"><img src="img/nav-footer/mapArea-inativo.png" alt=""></a>
+        </div>
+        <div>
+            <a href="postosCertificados.html"><img src="img/nav-footer/postos-ativo.png" alt=""></a>
+        </div>
+        <div>
+            <a href="#"><img src="img/nav-footer/information-inativo.png" alt=""></a>
+        </div>
+    </footer>
+</body>
+
+</html>
