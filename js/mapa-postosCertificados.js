@@ -33,7 +33,7 @@ class LocalControl {
         this.controlUI.addEventListener('click', () => {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function (position) { // callback de sucesso
-                    // ajusta a posiÃ§Ã£o do marker para a localizaÃ§Ã£o do usuÃ¡rio
+                    // ajusta a posição do marker para a localização do usuÃ¡rio
                     marker = new google.maps.Marker({
                         map: map,
                         draggable: false,
@@ -42,7 +42,7 @@ class LocalControl {
                         icon: 'img/mapa/user.png'
                     });
                     infowindow = new google.maps.InfoWindow({
-                        content: 'Localiza��o'
+                        content: 'Localização'
                     });
 
                     marker.addListener('click', function () {
@@ -57,7 +57,7 @@ class LocalControl {
                     });
                 this.controlDiv.style.display = 'none';
             } else {
-                console.log('Navegador nÃ£o suporta Geolocalização!');
+                alert('Navegador não suporta Geolocalização!');
             }
         });
     }
