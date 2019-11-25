@@ -1,0 +1,40 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main>h3 {
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+}
+
+section {
+    width: 90%;
+    display: flex;
+    background: #FCFCFC;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 17px 0;
+}
+
+.instrucao {
+    display: block;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.instrucao h3 {
+    color: #675F58;
+    font-weight: normal;
+    margin: 10px auto;
+}
+
+.instrucao p {
+    color: #B4AFAE;
+    font-size: 14px;
+    line-height: 19px;
+    margin: 5px auto;
+}
