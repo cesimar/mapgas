@@ -81,6 +81,7 @@ function marcadores() {
 
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(pontos.Latitude, pontos.Longitude),
+                animation: google.maps.Animation.DROP,
                 map: map,
                 icon: icon
             });
@@ -91,6 +92,10 @@ function marcadores() {
                     infowindow.open(map, marker);
                 };
             })(marker, i))
+
+            if (marker.icon == 'none'){
+                marker.setMap(null)
+            }
         });
     });
 
